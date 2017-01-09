@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<section id="intro">
+  <div class="inner wide">
+    {{content}}
+  </div>
+</section>
+
+<section id="projects">
+  <div class="grid wide">
+    <div class="grid-item grid-sizer"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+  </div>
+</section>
+
+
+<script>
+$('.grid').masonry({
+  // options
+  itemSelector: '.grid-item',
+  columnWidth: '.grid-sizer'
+});
+</script>
