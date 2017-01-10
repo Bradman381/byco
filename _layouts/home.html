@@ -10,18 +10,17 @@ layout: default
 
 <section id="projects">
   <div class="grid wide">
-    <div class="grid-item grid-sizer"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
-    <div class="grid-item"></div>
+    {% assign first = true %}
+    {% for project in site.projects %}
+      <div class="grid-item{% if first %} grid-sizer{% endif %}"></div>
+      {% assign first = false %}
+    {% endfor %}
   </div>
 </section>
 
 
 <script>
-$('.grid').masonry({
+$('.grid').isotope({
   // options
   itemSelector: '.grid-item',
   columnWidth: '.grid-sizer'
