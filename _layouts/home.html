@@ -9,10 +9,20 @@ layout: default
 </section>
 
 <section id="projects">
+  <h2 class="wide">Projects</h2>
   <div class="grid wide">
     {% assign first = true %}
     {% for project in site.projects %}
-      <div class="grid-item{% if first %} grid-sizer{% endif %}"></div>
+    <a href="{{project.url}}" class="grid-item{% if first %} grid-sizer{% endif %}">
+        <img src="{{project.thumbnail}}" /> 
+        <div class="label">
+          <div class="inner">
+            <h3>{{project.title}}</h3>
+            <p>{{project.brief}}</p>
+            <time datetime="{{project.year}}">{{project.year}}</time>
+          </div> 
+        </div>
+      </a>
       {% assign first = false %}
     {% endfor %}
   </div>
