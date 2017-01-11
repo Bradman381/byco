@@ -140,7 +140,8 @@ header#intro {
 
 main {
     background-color: #fff;
-    padding: 2em;
+    padding: 2em 2em 4em 2em;
+    margin-bottom: 4em;
 }
 main time {
     font-size: 3rem;
