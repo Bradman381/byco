@@ -15,15 +15,21 @@ body {
     box-sizing: inherit;
 }
 
-a {
+a:link, a:visited {
     text-decoration: none;
+    color: #09c;
 }
+
 p {
     margin-bottom: 2rem;
 }
 
+ul, ol {
+    list-style-position: outside;
+    padding-left: 1.5em;
+}
+
 li {
-    padding-left: 0.5em;
     margin: 0;
 }
 
@@ -148,6 +154,9 @@ main h1 {
     padding: 0.25em 0 0.125em 0;
     margin: 0;
     line-height: 1;
+}
+main p {
+    margin-bottom: 1rem;
 }
 iframe {
     border: 1px solid #ddd;
