@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<section id="intro" style="background-color: #f4f4f4;">
+  <div class="inner wide">
+    {% capture my_include %}{% include intro.md %}{% endcapture %}
+    {{ my_include | markdownify }}
+  </div>
+</section>
+<main>
+  <div class="inner wide">
+    {{content}}
+  </div>
+</main>
