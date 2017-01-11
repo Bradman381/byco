@@ -1,9 +1,9 @@
 ---
-title: Hexapedal Robot
-brief: A bluetooth-controlled six legged robot.
-thumbnail: https://brentyi.com/wp-content/uploads/2016/12/robot-400x400.jpg
+title: Drawing Machine
+brief: A 2D plotter with a polar coordinate system.
+thumbnail: https://brentyi.com/wp-content/uploads/2016/12/plotter-400x400.jpg
 year: 2016
-order: 100
+order: 99
 ---
 
 <iframe src="http://stl.brentyi.com/viewer/1483428675847"></iframe>
