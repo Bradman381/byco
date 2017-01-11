@@ -23,11 +23,11 @@ The chassis is constructed out of three pieces of 1/4" plywood, and the motorize
 ### Electronics
 
 We couldn't find any satisfactory off-the-shelf solutions for handling the electronics portions of our robot, so I ended designing a custom control PCB to meet our needs. Features:
-- three TB6612 dual h-bridge driver ICs (for driving 6 motors individually)
+- three TB6612 dual h-bridge driver ICs (for driving 6 individual leg motors)
 - an ADXL345 3-axis accelerometer for orientation detection
 - an MP1584 5V/3A buck converter (in case I want to add a Raspberry Pi or something in the future)
 - an N-fet-based electronic power switch
-- three I2C output connectors for our absolute encoders
+- three I2C output connectors for our absolute encoders -- these were daisy chained, so we really only needed one
 - a filtered battery voltage measurement input
 
 To cut costs and reduce complexity, the board was designed to plug into an ATmega328P-powered Arduino Nano microcontroller.
