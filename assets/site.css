@@ -23,6 +23,7 @@ p {
 }
 
 li {
+    padding-left: 0.5em;
     margin: 0;
 }
 
@@ -37,6 +38,9 @@ li {
     background-color: #fff;
     text-align: left;
     padding: 10em 2em 2em 2em;
+}
+header#intro {
+    background-color: #f4f4f4;
 }
 #intro .inner {
     margin: 0 auto;
@@ -76,6 +80,10 @@ li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-filter: grayscale(0.2);
+    -webkit-filter: grayscale(20%);
+    filter: gray;
+    filter: grayscale(20%);
     opacity: 0.8;
 
     transition: filter 1s;
@@ -106,7 +114,11 @@ li {
     transform: translateY(-50%);
     padding: 2em;
 }
-.grid-item h3, .grid-item p {
+.grid-item h3 {
+    margin: 0;
+    line-height: 1.2em;
+}
+.grid-item p {
     margin: 0;
 }
 .grid-item:hover .label {

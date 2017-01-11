@@ -12,8 +12,9 @@ layout: default
   <h2 class="wide">Projects</h2>
   <div class="grid wide">
     {% assign first = true %}
-    {% for project in site.projects %}
-    <a href="{{project.url}}" class="grid-item{% if first %} grid-sizer{% endif %}">
+    {% assign sorted_projects = (site.projects | sort:"order") | reverse %}
+    {% for project in sorted_projects %}
+    <a href="{{project.url}}" class="grid-item{% if first %} grid-sizer{% endif %}" target="_blank">
         <img src="{{project.thumbnail}}" /> 
         <div class="label">
           <div class="inner">
