@@ -1,12 +1,12 @@
 ---
 title: Hexapedal Robot
 brief: A bluetooth-controlled six legged robot.
-thumbnail: https://brentyi.com/wp-content/uploads/2016/12/robot-400x400.jpg
+thumbnail: /assets/images/thumbnail_rhex.jpg
 year: 2016
 order: 100
 ---
 
-<iframe src="http://stl.brentyi.com/viewer/1483428675847"></iframe>
+<iframe src="http://stl.brentyi.com/viewer/1483428675847" scrolling="no"></iframe>
 
 Arduino sketch + associated source files for running Sparky, the [RHex](https://en.wikipedia.org/wiki/Rhex)-style hexapedal robot we designed for UC Berkeley's Introduction to Prototyping & Fabrication course.
 
