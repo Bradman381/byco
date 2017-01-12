@@ -14,17 +14,15 @@ For our midterm project in UC Berkeley's *Introduction to Prototyping & Fabricat
 
 ### Mechanical Design
 
-Our plotter is primarily constructed out of 1/4" plywood.
-
-Standard NEMA17 steppers are used for both the linear and angular movements, and a magnetic solenoid is used to lift the pen up and down.
+We constructed our plotter out of 1/4" plywood, and used standard NEMA17 steppers are used for both the linear and angular movements. A magnetic solenoid is then used to lift the pen up and down.
 
 ---
 
 ### Electronics
 
-All of the electronics work was done on a piece of perfboard, which included:
+All of the electronics work was done on perfboard, which included:
 - an Arduino Nano microcontroller
-- two DRV8825 stepper drivers
+- two DRV8825 stepper drivers (one for x, one for theta)
 - an IRLB8721 logic-level N-fet for actuating our solenoid
 - connectors broken out for external switches & LEDs
 
@@ -32,7 +30,9 @@ All of the electronics work was done on a piece of perfboard, which included:
 
 ### Firmware
 
-To run our plotter, we developed a custom [g-code](https://en.wikipedia.org/wiki/G-code) interpreter to accept standard CNC commands over a serial connection made to our dashboard application. 
+To run our plotter, we developed a custom [g-code](https://en.wikipedia.org/wiki/G-code) interpreter to accept standard CNC commands over a serial connection. This allows toolpaths to be easily generated using off-the-shelf CAM applications and sent to our machine via our dashboard application.
+
+All of the firmware was written in C++ using the Arduino platform, and our dashboard application was built as a Google Chrome Packaged App in Javascript.
 
 ---
 
