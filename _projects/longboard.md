@@ -24,9 +24,15 @@ I spent much of my senior year in high school designing, building, and riding a 
 ---
 
 ### Remote
+
+<iframe src="http://stl.brentyi.com/viewer/1484221132057" scrolling="no"></iframe>
+
 I developed a fully-custom wireless remote to control my longboard, with a 900mAh lithium battery that provides over 36 hours of continuous use from a two hour charge over USB.
 
 The electronics of the remote were built around an ATmega32u4 microcontroller and nRF24L01+ 2.4Ghz transciever IC.
+
+
+![remote](/assets/images/remote.png)
 
 ---
 
