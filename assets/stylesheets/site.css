@@ -8,7 +8,7 @@ layout: null
 body {
     font-family: 'Source Sans Pro', sans-serif;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: #f4f4f4;
 }
 
 * {
@@ -33,6 +33,9 @@ li {
     margin: 0;
 }
 
+.focus {
+    background-color: #fff;
+}
 .wide {
     max-width: 100%;
     width: 100rem;
@@ -44,9 +47,7 @@ li {
     text-align: left;
     padding: 10em 2em 2em 2em;
 }
-header#intro {
-    background-color: #f4f4f4;
-}
+
 #intro .inner {
     margin: 0 auto;
     padding: 1em;
@@ -57,7 +58,6 @@ header#intro {
 
 #projects {
     padding: 2em;
-    background-color: #f4f4f4;
 }
 #projects h2 {
     margin-bottom: 0.8em;
