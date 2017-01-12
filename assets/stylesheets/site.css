@@ -94,15 +94,16 @@ header#intro {
 
     transition: filter 1s;
 }
-.grid-item:hover img {
-    -webkit-filter: grayscale(1);
-    -webkit-filter: grayscale(100%);
-    filter: gray;
-    filter: grayscale(100%);
+.grid-item .label .inner {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    padding: 2em;
 }
 .grid-item .label {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     position: absolute;
     top: 0;
@@ -112,27 +113,12 @@ header#intro {
     z-index: 1;
     transition: opacity 0.4s;
 }
-.grid-item .label .inner {
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-45%);
-    padding: 2em;
-    transition: transform 0.6s;
-}
-.grid-item:hover .label .inner {
-    transform: translateY(-50%);
-}
 .grid-item h3 {
     margin: 0;
     line-height: 1.1em;
 }
 .grid-item p {
     margin: 0.5em 0;
-}
-.grid-item:hover .label {
-    opacity: 1;
 }
 .grid-item time {
     color: #aaa;
@@ -166,33 +152,38 @@ iframe {
     margin-bottom: 2rem;
 }
 
-
-/* smaller than phablet */
-@media (max-width: 550px) {
-    .grid-item .label {
-        opacity: 1;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-    .grid-item .label .inner {
-        transform: translateY(-50%);
-    }
-}
-
 /* larger than phablet */
 @media (min-width: 550px) {
     .grid-item {
         width: 48%;
         height: 30em;
     }
+    .grid-item .label {
+        opacity: 0;
+    }
+    .grid-item:hover img {
+        -webkit-filter: grayscale(1);
+        -webkit-filter: grayscale(100%);
+        filter: gray;
+        filter: grayscale(100%);
+    }
+    .grid-item .label .inner {
+        transition: transform 0.6s;
+        transform: translateY(-45%);
+    }
+    .grid-item:hover .label .inner {
+        transform: translateY(-50%);
+    }
+    .grid-item:hover .label {
+        opacity: 1;
+    }
+
     iframe {
         height: 40rem;
     }
 }
 /* larger than desktop */
 @media (min-width: 1000px) {
-    html {
-        font-size: 75%;
-    }
     .grid-item {
         width: 31.3%;
     }
