@@ -8,7 +8,7 @@ layout: null
 body {
     font-family: 'Source Sans Pro', sans-serif;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #fff;
 }
 
 * {
@@ -41,7 +41,6 @@ li {
 }
 
 #intro {
-    background-color: #fff;
     text-align: left;
     padding: 10em 2em 2em 2em;
 }
@@ -58,6 +57,7 @@ header#intro {
 
 #projects {
     padding: 2em;
+    background-color: #f4f4f4;
 }
 #projects h2 {
     margin-bottom: 0.8em;
@@ -125,9 +125,7 @@ header#intro {
 }
 
 main {
-    background-color: #fff;
     padding: 2em 2em 4em 2em;
-    margin-bottom: 4em;
 }
 main time {
     font-size: 3rem;
