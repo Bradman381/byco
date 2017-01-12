@@ -152,14 +152,15 @@ iframe {
     margin-bottom: 2rem;
 }
 
-/* larger than phablet */
 @media (min-width: 550px) {
     .grid-item {
         width: 48%;
         height: 30em;
     }
     .grid-item .label {
+        background-color: rgba(0, 0, 0, 0.5);
         opacity: 0;
+        text-shadow: 0 0 1em #555;
     }
     .grid-item:hover img {
         -webkit-filter: grayscale(1);
@@ -182,15 +183,16 @@ iframe {
         height: 40rem;
     }
 }
-/* larger than desktop */
 @media (min-width: 1000px) {
     .grid-item {
         width: 31.3%;
     }
-    #intro {
-        /*text-align: center;*/
-    }
     iframe {
         height: 50rem;
+    }
+}
+@media (min-width: 1400px) {
+    html {
+        font-size: 75%;
     }
 }
