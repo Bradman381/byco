@@ -143,6 +143,11 @@ main h1 {
 main p {
     margin-bottom: 1rem;
 }
+main img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 2rem 0;
+}
 iframe {
     border: 1px solid #ddd;
     width: 100%;

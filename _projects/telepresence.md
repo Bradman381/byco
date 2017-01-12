@@ -6,6 +6,8 @@ year: 2016
 order: 86
 ---
 
+![telepresence robot](/assets/images/telepresence.png)
+
 At HackIllinois 2016, my team built a telepresence robot that allowed a user remotely explore an environemnt via a Google Cardboard VR headset.
 
 ---
