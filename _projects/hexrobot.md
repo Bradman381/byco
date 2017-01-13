@@ -6,7 +6,7 @@ year: 2016
 order: 100
 ---
 
-<iframe src="http://stl.brentyi.com/viewer/1483428675847" scrolling="no"></iframe>
+<iframe src="https://stl.brentyi.com/viewer/1483428675847" scrolling="no"></iframe>
 
 For our final project in UC Berkeley's *Introduction to Prototyping & Fabrication* course, my partner and I designed, built, and programmed an [RHex](https://en.wikipedia.org/wiki/Rhex)-style hexapedal robot. The design is optimized to cross rough terrain at an extremely low cost (<$70).
 

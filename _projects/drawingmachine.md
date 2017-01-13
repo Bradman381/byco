@@ -6,7 +6,7 @@ year: 2016
 order: 99
 ---
 
-<iframe src="http://stl.brentyi.com/viewer/1484125055069" scrolling="no"></iframe>
+<iframe src="https://stl.brentyi.com/viewer/1484125055069" scrolling="no"></iframe>
 
 For our midterm project in UC Berkeley's *Introduction to Prototyping & Fabrication* course, my partner and I designed, built, and programmed a fully functional 2D plotter with a polar coordinate system.
 

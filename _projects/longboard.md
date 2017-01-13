@@ -6,7 +6,7 @@ year: 2015
 order: 91
 ---
 
-<iframe src="http://stl.brentyi.com/viewer/1483423750494" scrolling="no"></iframe>
+<iframe src="https://stl.brentyi.com/viewer/1483423750494" scrolling="no"></iframe>
 
 I spent much of my senior year in high school designing, building, and eventually riding a custom motorized longboard.
 
@@ -25,7 +25,7 @@ I spent much of my senior year in high school designing, building, and eventuall
 
 ### Remote
 
-<iframe src="http://stl.brentyi.com/viewer/1484221132057" scrolling="no"></iframe>
+<iframe src="https://stl.brentyi.com/viewer/1484221132057" scrolling="no"></iframe>
 
 I developed a fully-custom wireless remote to control my longboard, with a 900mAh lithium battery that provides over 36 hours of continuous use from a two hour charge over USB.
 
