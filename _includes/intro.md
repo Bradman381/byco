@@ -1,6 +1,6 @@
 I'm a second-year studying **Computer Science** at the **University of California, Berkeley**.
 
-[Github](https://github.com/brentyi){:target="_blank"}  &nbsp;&bull;&nbsp;  [LinkedIn](https://linkedin.com/in/brentyi){:target="_blank"} &nbsp;&bull;&nbsp; [Email](){:id="email_link"}
+[Coursework](/coursework) &nbsp;//&nbsp; [Github](https://github.com/brentyi){:target="_blank"}  &nbsp;&bull;&nbsp;  [LinkedIn](https://linkedin.com/in/brentyi){:target="_blank"} &nbsp;&bull;&nbsp; [Email](){:id="email_link"}
 
 <script>
 $(function() {
