@@ -154,6 +154,9 @@ iframe {
     height: 30rem;
     margin-bottom: 2rem;
 }
+.MathJax_Display {
+    margin: 3em 0 !important;
+}
 
 @media (min-width: 550px) {
     .grid-item {

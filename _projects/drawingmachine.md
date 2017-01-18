@@ -4,6 +4,7 @@ brief: A 2D plotter with a polar coordinate system.
 thumbnail: /assets/images/thumbnail_plotter.jpg
 year: 2016
 order: 99
+latex: yes
 ---
 
 <iframe src="https://stl.brentyi.com/viewer/1484125055069" scrolling="no"></iframe>
@@ -17,6 +18,31 @@ For our midterm project in UC Berkeley's *Introduction to Prototyping & Fabricat
 To run the plotter, we developed a custom [g-code](https://en.wikipedia.org/wiki/G-code) interpreter that accepts standard CNC commands read from either our microcontroller's flash memory or a USB serial connection. The latter allows toolpaths to be easily generated using off-the-shelf CAM applications and sent to the machine via our dashboard application.
 
 All of the firmware was written in C++ using the Arduino platform, and our dashboard application was built as a Google Chrome Packaged App in Javascript.
+
+<!-- most of this blurb is just an excuse to use latex -->
+
+Most of the code itself was pretty straightforward, but we initially had some issues with the quality of lines being drawn by our machine.
+This was largely a result of our naive motion control implementation, which didn't compensate for the nonlinear relationship between our polar motor positions and our cartesian pen coordinates.
+
+When given two coordinates to draw a straight line between, this would result in an arc instead. Our original solution of treating longer lines as series of smaller segments (one arc becomes a series of smaller, less visible arcs) worked alright, but this method of discrete linearization had issues when we tried to increase the resolution. We ultimately approached this problem with some simple calculus, by calculating polar velocity setpoints for our system as functions of our desired cartesian velocities:
+
+$$
+\begin{align*}
+    r &= \text{leadscrew linear position} \\
+    \theta &= \text{turntable angular position} \\
+    x &= \text{effective cartesian x} \\
+    y &= \text{effective cartesian y} \\\\
+    x &= r \cos \theta \\
+    y &= r \sin \theta \\\\
+    \frac{dx}{dt} &= \frac{dr}{dt} \cos \theta - r\frac{d\theta}{dt}sin \theta\\
+    \frac{dy}{dt} &= \frac{dr}{dt} \sin \theta + r\frac{d\theta}{dt}cos \theta\\\\
+    \begin{bmatrix}\frac{dx}{dt} \\ \frac{dy}{dt}\end{bmatrix} &= \begin{bmatrix}\cos \theta & -r \sin \theta \\ \sin \theta & r \cos \theta\end{bmatrix}\begin{bmatrix}\frac{dr}{dt} \\ \frac{d\theta}{dt}\end{bmatrix} \\\\
+    \begin{bmatrix}\frac{dr}{dt} \\ \frac{dy}{dt}\end{bmatrix} &= \begin{bmatrix}\cos \theta & -r \sin \theta \\ \sin \theta & r \cos \theta\end{bmatrix}^{-1}\begin{bmatrix}\frac{dx}{dt} \\ \frac{dy}{dt}\end{bmatrix} \\
+                                                               &= \begin{bmatrix}\cos \theta & \sin \theta \\ -\frac{1}{r} \sin \theta & \frac{1}{r} \cos \theta\end{bmatrix}\begin{bmatrix}\frac{dx}{dt} \\ \frac{dy}{dt}\end{bmatrix} \\\\
+    \frac{dr}{dt} &= \frac{dx}{dt} * \cos \theta + \frac{dy}{dt} * \sin \theta \\
+    \frac{d\theta}{dt} &= -\frac{dx}{dt} * \frac{1}{r} \sin \theta + \frac{dy}{dt} * \frac{1}{r} \cos \theta \\
+\end{align*}
+$$
 
 ---
 

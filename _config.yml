@@ -29,6 +29,11 @@ defaults:
   -
     scope:
       path: ""
+    values:
+      latex: no
+  -
+    scope:
+      path: ""
       type: projects
     values:
       layout: project
