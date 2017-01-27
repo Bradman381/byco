@@ -15,7 +15,7 @@ layout: default
     {% assign sorted_projects = (site.projects | sort:"order") | reverse %}
     {% for project in sorted_projects %}
     <a href="{{project.url}}" class="grid-item{% if first %} grid-sizer{% endif %}">
-        <img src="{{project.thumbnail}}" />
+        <img src="{{project.thumbnail}}" alt="{{project.title}}" />
         <div class="label">
           <div class="inner">
             <h3>{{project.title}}</h3>
@@ -31,9 +31,11 @@ layout: default
 
 
 <script>
-$('.grid').isotope({
-  // options
-  itemSelector: '.grid-item',
-  columnWidth: '.grid-sizer'
+$(function() {
+  $('.grid').isotope({
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer'
+  });
 });
 </script>
