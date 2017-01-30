@@ -2,13 +2,13 @@
 layout: default
 ---
 
-<section id="intro">
+<header id="intro">
   <div class="inner wide">
     <h1><a href="/">{{site.title}}</a></h1>
     {% capture intro %}{% include intro.md %}{% endcapture %}
     {{ intro | markdownify }}
   </div>
-</section>
+</header>
 <main>
   <div class="inner wide">
     {{content}}

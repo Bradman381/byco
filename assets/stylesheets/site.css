@@ -19,6 +19,9 @@ a:link, a:visited {
     text-decoration: none;
     color: #09c;
 }
+p a:hover, h1 a:hover {
+    opacity: 0.7;
+}
 
 p {
     margin-bottom: 2rem;
@@ -136,15 +139,15 @@ main time {
     display: block;
     padding-bottom: 1em;
 }
-main h1 {
-    padding: 0.25em 0 0.125em 0;
+h1 {
+    padding: 0.25em 0;
     margin: 0;
     line-height: 1;
 }
-main p {
+#intro p {
     margin-bottom: 1rem;
 }
-main img {
+img {
     max-width: 100%;
     height: auto;
     margin: 0 0 2rem 0;
