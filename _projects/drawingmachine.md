@@ -58,7 +58,7 @@ All of the electronics work was done on perfboard, and included:
 
 ### Mechanical Design
 
-We constructed our plotter out of 1/4" plywood, and used standard NEMA17 steppers are used for both the linear and angular movements. An SMT-1325S magnetic solenoid is attached to the pen holder for the lifting motion.
+We constructed our plotter out of 1/4" plywood, and used standard NEMA17 steppers for both linear and angular movement. An SMT-1325S magnetic solenoid is attached to the pen holder for the lifting motion.
 
 ---
 
