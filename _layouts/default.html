@@ -18,13 +18,13 @@
     {{ content }}
 
     {% if page.latex %}
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
     {% endif %}
 
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" async></script>
 
     <!-- Piwik -->
-    <script type="text/javascript">
+    <script>
       var _paq = _paq || [];
       // tracker methods like "setCustomDimension" should be called before "trackPageView"
       _paq.push(['trackPageView']);
